@@ -15,4 +15,10 @@
 * 目前大部分的研究都是關於離線學習的generalization，比較少online realtime的研究，而此篇的M-MCTS就是提供online的generalization方法，並在"GO"這個game中證實有效。
 * 本篇架構: 前言=>memory架構理論介紹=>M-MCTS演算法=>相關研究及實驗結果=>結論+未來展望  
 #### Preliminaries
-* Setting
+* Setting:
+  * S: 狀態
+  * V()(s): s狀態的value(以s狀態為起點的模擬結果的平均reward)
+  * V*(s): state s的true value
+  * M-MCTS目的: 讓value estimations藉由memory更準確
+  * approximate value estimation: given a memory *M* 以及 state *x*
+    
