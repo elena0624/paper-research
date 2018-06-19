@@ -1,4 +1,6 @@
-## [A Neural Stochastic Volatility Model](https://arxiv.org/abs/1712.00504)
+# [A Neural Stochastic Volatility Model]  
+* [原文](https://arxiv.org/abs/1712.00504)
+
 ### abstract  
 * The authors propose a recurrent neural network approach for constructing a
 stochastic volatility model for financial time series. They introduce an
@@ -20,4 +22,4 @@ values with t<t', but in the true posterior p(Z|X) each z_t depends on all the
 X.
 4. 前篇有類似概念 Sequential Neural Models with Stochastic Layers Fraccaro, Marco and S\o nderby,
 S\o ren Kaae and Paquet, Ulrich and Winther, Ole In NIPS 2016.
-5. 
+5. ...
