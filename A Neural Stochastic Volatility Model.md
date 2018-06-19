@@ -1,4 +1,4 @@
-# [A Neural Stochastic Volatility Model]  
+# A Neural Stochastic Volatility Model  
 * [原文](https://arxiv.org/abs/1712.00504)
 
 ### abstract  
