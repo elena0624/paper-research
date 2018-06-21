@@ -77,4 +77,34 @@ Model Family**
 #### Neural Stochastic Volatility Models
 * In this section, we establish the neural stochastic volatility
 model (NSVM) for volatility estimation and prediction.
-
+* **Generating Observable Sequence**
+  * hxt hzt denote the hidden states of the corresponding
+RNNs. The MLPs map the hidden states of RNNs into
+the means and deviations of variables of interest. The collection
+of parameters Φ is comprised of the weights of RNNs
+and MLPs. NSVM relaxes the conventional constraint that
+the latent variable **zt is N (0, 1)** in a way that zt is no longer
+i.i.d noise but **a time-varying signal from external process
+with self-evolving nature**. As discussed above, this relaxation
+will benefit the effectiveness in real scenarios
+  * One should notice that when the latent variable zt is obtained,
+e.g. by inference (see details in the next subsection),
+**the conditional distribution pΦ(X|Z)** (Eq. (14)) will be involved
+in generating the observable xt instead of the joint
+distribution **pΦ(X, Z)** (Eq. (15)). This is essentially the scenario
+of predicting future values of the observable variable
+given its history. We will use the term “generative model”
+and will not discriminate the unconditional generative model
+or the conditional one as it can be inferred in context.
+這段是什麼意思?????
+* **Inferencing the Latent Process**
+  * The neural network implementation of the model, referred
+to as the inference network, is designed to equip a cascaded
+architecture with an autoregressive RNN and a bidirectional
+RNN, where the bidirectional RNN incorporates both the
+forward and backward dependencies on the entire observations
+whereas the autoregressive RNN models the temporal
+dependencies on the latent variables
+* **Forecasting Observations in Future**
+   * 略
+#### Experiment
